@@ -60,7 +60,7 @@
        
     }
     button {
-        padding: 10px;
+        padding: 20px;
 
     }
 </style>
