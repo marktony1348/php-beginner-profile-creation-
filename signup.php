@@ -3,15 +3,26 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $username = addslashes($_POST["username"]);
-        $email = addslashes($_POST["email"]);
-        $password = addslashes($_POST["password"]);
+        $username = addslashes($_POST['username']);
+        $email = addslashes($_POST['email']);
+        $password = addslashes($_POST['password']);
+        $date = date('Y-m-d H:i:s');
+        // where i= minutes
+
+    //insert query used here  
+    $query = "insert into users (username,password,email,date) values ('$username','$password','$email','$date')";
+
+    $result = mysqli_query($con, $query);
+    // always the connection before the query
+
+    // redirect to login page after signup
+    header ("Location: login.php");
+    die;
+
     }
-
-    "insert into users () values ()"
-
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

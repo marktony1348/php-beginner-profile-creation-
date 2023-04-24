@@ -1,2 +1,2 @@
 <?php
-require "connection.php";
+require 'connection.php';
